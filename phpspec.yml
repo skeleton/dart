@@ -1,0 +1,6 @@
+suites:
+    tube_suite:
+        namespace: Skeleton\Dart
+        psr4_prefix: Skeleton\Dart
+        spec_path: tests/
+        spec_prefix: specification

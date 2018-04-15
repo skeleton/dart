@@ -1,0 +1,11 @@
+{
+    "name": "skeleton/dart",
+    "description": "Darts game",
+    "type": "project",
+    "require-dev": {
+        "phpspec/phpspec": "^4.3"
+    },
+    "license": "MIT License",
+    "minimum-stability": "stable",
+    "require": {}
+}

@@ -2,6 +2,9 @@
     "name": "skeleton/dart",
     "description": "Darts game",
     "type": "project",
+    "require": {
+        "ramsey/uuid": "^3.7"
+    },
     "require-dev": {
         "phpspec/phpspec": "^4.3"
     },
@@ -15,6 +18,5 @@
         }
     },
     "license": "MIT License",
-    "minimum-stability": "stable",
-    "require": {}
+    "minimum-stability": "stable"
 }

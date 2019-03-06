@@ -5,6 +5,15 @@
     "require-dev": {
         "phpspec/phpspec": "^4.3"
     },
+    "autoload": {
+        "psr-4": {
+            "Skeleton\\Dart\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+        }
+    },
     "license": "MIT License",
     "minimum-stability": "stable",
     "require": {}

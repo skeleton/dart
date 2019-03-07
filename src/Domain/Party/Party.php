@@ -28,4 +28,14 @@ class Party
     {
         return new self($identifier, $type, $players);
     }
+
+    public function getIdentifier(): Identifier
+    {
+        return $this->identifier;
+    }
+
+    public function getType(): Type
+    {
+        return $this->type;
+    }
 }

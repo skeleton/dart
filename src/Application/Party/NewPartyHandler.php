@@ -2,6 +2,8 @@
 
 namespace Skeleton\Dart\Application\Party;
 
+use Ramsey\Uuid\Uuid;
+use Skeleton\Dart\Domain\Party\Identifier;
 use Skeleton\Dart\Domain\Party\Party;
 use Skeleton\Dart\Domain\Party\Type;
 use Skeleton\Dart\Domain\Player\Nickname;
@@ -20,6 +22,7 @@ class NewPartyHandler
         }
 
         $players = PlayersCollection::fromPlayers($players);
-        $party = Party::play($type, $players);
+        $identifier = Identifier::fromString(Uuid::uuid4()->toString());
+        $party = Party::play($identifier, $type, $players);
     }
 }

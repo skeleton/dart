@@ -1,0 +1,8 @@
+Skeleton\Dart\Domain\Party\Type:
+    type: embeddable
+    fields:
+        type:
+            type: string
+            length: 25
+            nullable: false
+            column: field

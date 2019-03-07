@@ -8,20 +8,24 @@ use Skeleton\Dart\Domain\Player\PlayersCollection;
 
 class Party
 {
+    /** @var Identifier */
+    private $identifier;
+
     /** @var Type */
     private $type;
 
     /** @var PlayersCollection */
     private $players;
 
-    private function __construct(Type $type, PlayersCollection $players)
+    private function __construct(Identifier $identifier, Type $type, PlayersCollection $players)
     {
+        $this->identifier = $identifier;
         $this->type = $type;
         $this->players = $players;
     }
 
-    public static function play(Type $type, PlayersCollection $players): Party
+    public static function play(Identifier $identifier, Type $type, PlayersCollection $players): Party
     {
-        return new self($type, $players);
+        return new self($identifier, $type, $players);
     }
 }

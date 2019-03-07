@@ -1,0 +1,8 @@
+Skeleton\Dart\Domain\Party\Party:
+    table: party
+    type: entity
+    embedded:
+        identifier:
+            class: Skeleton\Dart\Domain\Party\Identifier
+        type:
+            class: Skeleton\Dart\Domain\Party\Type

@@ -3,7 +3,8 @@
     "description": "Darts game",
     "type": "project",
     "require": {
-        "ramsey/uuid": "^3.7"
+        "ramsey/uuid": "^3.7",
+        "webmozart/assert": "^1.4"
     },
     "require-dev": {
         "phpspec/phpspec": "^4.3"

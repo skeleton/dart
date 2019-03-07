@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Skeleton\Dart\Domain\Player;
 
 class Player
@@ -17,7 +19,7 @@ class Player
         return new self($nickname);
     }
 
-    public function nickname(): string
+    public function nickname(): Nickname
     {
         return $this->nickname;
     }

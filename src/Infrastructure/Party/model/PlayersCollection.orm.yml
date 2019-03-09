@@ -1,0 +1,7 @@
+Skeleton\Dart\Domain\Party\PlayersCollection:
+    type: embeddable
+    fields:
+        players:
+            type: simple_array
+            nullable: false
+            column: field

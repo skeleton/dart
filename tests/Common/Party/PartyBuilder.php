@@ -8,9 +8,9 @@ use Ramsey\Uuid\Uuid;
 use Skeleton\Dart\Domain\Party\Identifier;
 use Skeleton\Dart\Domain\Party\Party;
 use Skeleton\Dart\Domain\Party\Type;
-use Skeleton\Dart\Domain\Player\Nickname;
-use Skeleton\Dart\Domain\Player\Player;
-use Skeleton\Dart\Domain\Player\PlayersCollection;
+use Skeleton\Dart\Domain\Party\Player\Nickname;
+use Skeleton\Dart\Domain\Party\Player\Player;
+use Skeleton\Dart\Domain\Party\PlayersCollection;
 
 class PartyBuilder
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Skeleton\Dart\Domain\Player;
+namespace Skeleton\Dart\Domain\Party\Player;
 
 class Player
 {

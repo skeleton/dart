@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace specification\Skeleton\Dart\Domain\Player;
 
 use Prophecy\Argument;
-use Skeleton\Dart\Domain\Player\Nickname;
-use Skeleton\Dart\Domain\Player\Player;
+use Skeleton\Dart\Domain\Party\Player\Nickname;
+use Skeleton\Dart\Domain\Party\Player\Player;
 use PhpSpec\ObjectBehavior;
 
 class PlayerSpec extends ObjectBehavior

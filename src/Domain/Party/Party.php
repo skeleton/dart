@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Skeleton\Dart\Domain\Party;
 
-use Skeleton\Dart\Domain\Player\PlayersCollection;
+use Skeleton\Dart\Domain\Party\PlayersCollection;
 
 class Party
 {
@@ -37,5 +37,10 @@ class Party
     public function getType(): Type
     {
         return $this->type;
+    }
+
+    public function getPlayers(): PlayersCollection
+    {
+        return $this->players;
     }
 }

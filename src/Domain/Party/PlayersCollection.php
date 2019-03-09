@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Skeleton\Dart\Domain\Player;
+namespace Skeleton\Dart\Domain\Party;
 
+use Skeleton\Dart\Domain\Party\Player\Player;
 use Webmozart\Assert\Assert;
 
 class PlayersCollection

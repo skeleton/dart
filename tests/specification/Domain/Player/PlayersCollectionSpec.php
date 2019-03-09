@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace specification\Skeleton\Dart\Domain\Player;
 
-use Skeleton\Dart\Domain\Player\Nickname;
-use Skeleton\Dart\Domain\Player\Player;
-use Skeleton\Dart\Domain\Player\PlayersCollection;
+use Skeleton\Dart\Domain\Party\Player\Nickname;
+use Skeleton\Dart\Domain\Party\Player\Player;
+use Skeleton\Dart\Domain\Party\PlayersCollection;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

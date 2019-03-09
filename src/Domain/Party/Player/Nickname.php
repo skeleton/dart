@@ -1,6 +1,6 @@
 <?php
 
-namespace Skeleton\Dart\Domain\Player;
+namespace Skeleton\Dart\Domain\Party\Player;
 
 /**
  * Nickname of the player

@@ -2,7 +2,7 @@
 
 namespace specification\Skeleton\Dart\Domain\Player;
 
-use Skeleton\Dart\Domain\Player\Nickname;
+use Skeleton\Dart\Domain\Party\Player\Nickname;
 use PhpSpec\ObjectBehavior;
 
 class NicknameSpec extends ObjectBehavior

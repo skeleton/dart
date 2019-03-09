@@ -7,3 +7,5 @@ Skeleton\Dart\Domain\Party\Party:
             class: Skeleton\Dart\Domain\Party\Identifier
         type:
             class: Skeleton\Dart\Domain\Party\Type
+        players:
+            class: Skeleton\Dart\Domain\Party\PlayersCollection

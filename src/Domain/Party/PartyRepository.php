@@ -10,4 +10,6 @@ namespace Skeleton\Dart\Domain\Party;
 interface PartyRepository
 {
     public function save(Party $party): void;
+
+    public function get(Identifier $identifier): ?Party;
 }

@@ -17,6 +17,9 @@ services:
         resource: '../src/*'
         exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
 
+    Skeleton\Dart\Infrastructure\Party\Persistence\PartyDatabaseRepository:
+        public: true
+
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
 #    App\Controller\:

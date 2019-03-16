@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace specification\Skeleton\Dart\Domain\Party;
 
-use Skeleton\Dart\Domain\Party\Type;
+use Skeleton\Dart\Domain\Party\Game;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-class TypeSpec extends ObjectBehavior
+class GameSpec extends ObjectBehavior
 {
     function let()
     {
@@ -17,7 +17,7 @@ class TypeSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType(Type::class);
+        $this->shouldHaveType(Game::class);
     }
 
     function it_transforms_it_into_string()
@@ -25,12 +25,12 @@ class TypeSpec extends ObjectBehavior
         $this->__toString()->shouldReturn('301');
     }
 
-    public function it_throws_an_exception_if_type_is_empty()
+    public function it_throws_an_exception_if_game_is_empty()
     {
         $this->shouldThrow('\InvalidArgumentException')->during('fromString', ['']);
     }
 
-    public function it_throws_an_exception_if_type_is_not_in_defined_list()
+    public function it_throws_an_exception_if_game_is_not_in_defined_list()
     {
         $this->shouldThrow('\InvalidArgumentException')->during('fromString', ['other']);
     }

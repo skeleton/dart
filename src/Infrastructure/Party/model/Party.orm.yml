@@ -5,7 +5,7 @@ Skeleton\Dart\Domain\Party\Party:
     embedded:
         identifier:
             class: Skeleton\Dart\Domain\Party\Identifier
-        type:
-            class: Skeleton\Dart\Domain\Party\Type
+        game:
+            class: Skeleton\Dart\Domain\Party\Game
         players:
             class: Skeleton\Dart\Domain\Party\PlayersCollection

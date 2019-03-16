@@ -7,8 +7,7 @@ namespace Skeleton\Dart\Test\Common\Party;
 use Ramsey\Uuid\Uuid;
 use Skeleton\Dart\Domain\Party\Identifier;
 use Skeleton\Dart\Domain\Party\Party;
-use Skeleton\Dart\Domain\Party\Type;
-use Skeleton\Dart\Domain\Party\Player\Nickname;
+use Skeleton\Dart\Domain\Party\Game;
 use Skeleton\Dart\Domain\Party\Player;
 use Skeleton\Dart\Domain\Party\PlayersCollection;
 
@@ -17,8 +16,8 @@ class PartyBuilder
     /** @var Identifier */
     private $identifier;
 
-    /** @var Type */
-    private $type;
+    /** @var Game */
+    private $game;
 
     /** @var PlayersCollection */
     private $players;
@@ -26,13 +25,13 @@ class PartyBuilder
     public function __construct()
     {
         $this->identifier = Identifier::fromString(Uuid::uuid4()->toString());
-        $this->type = Type::fromString('301');
+        $this->game = Game::fromString('301');
         $this->players = PlayersCollection::fromPlayers([Player::fromString('skeleton')]);
     }
 
     public function build()
     {
-        $party = Party::play($this->identifier, $this->type, $this->players);
+        $party = Party::play($this->identifier, $this->game, $this->players);
 
         return $party;
     }
@@ -44,9 +43,9 @@ class PartyBuilder
         return $this;
     }
 
-    public function withType(string $type): PartyBuilder
+    public function withGame(string $game): PartyBuilder
     {
-        $this->type = Type::fromString($type);
+        $this->game = Game::fromString($game);
 
         return $this;
     }

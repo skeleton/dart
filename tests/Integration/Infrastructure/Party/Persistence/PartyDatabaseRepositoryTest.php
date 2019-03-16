@@ -17,7 +17,7 @@ class PartyDatabaseRepositoryTest extends IntegrationCase
     {
         $identifier = Uuid::uuid4()->toString();
         $party = (new PartyBuilder())
-            ->withType('301')
+            ->withGame('301')
             ->withIdentifier($identifier)
             ->withPlayers(['skeleton', 'krevindiou'])
             ->build();
@@ -27,7 +27,7 @@ class PartyDatabaseRepositoryTest extends IntegrationCase
 
         $party = $repository->get(Identifier::fromString($identifier));
         Assert::assertSame($identifier, $party->getIdentifier()->__toString());
-        Assert::assertSame('301', $party->getType()->__toString());
+        Assert::assertSame('301', $party->getGame()->__toString());
         Assert::assertSame(['skeleton', 'krevindiou'], $party->getPlayers()->__toArray());
     }
 }

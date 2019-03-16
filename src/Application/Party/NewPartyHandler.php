@@ -6,7 +6,7 @@ use Ramsey\Uuid\Uuid;
 use Skeleton\Dart\Domain\Party\Identifier;
 use Skeleton\Dart\Domain\Party\Party;
 use Skeleton\Dart\Domain\Party\PartyRepository;
-use Skeleton\Dart\Domain\Party\Type;
+use Skeleton\Dart\Domain\Party\Game;
 use Skeleton\Dart\Domain\Party\Player;
 use Skeleton\Dart\Domain\Party\PlayersCollection;
 
@@ -22,7 +22,7 @@ class NewPartyHandler
 
     public function __invoke(NewParty $newParty)
     {
-        $type = Type::fromString($newParty->type);
+        $type = Game::fromString($newParty->game);
 
         $players = [];
         foreach ($newParty->players as $player) {

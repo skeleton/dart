@@ -7,14 +7,14 @@ namespace Skeleton\Dart\Application\Party;
 class NewParty
 {
     /** @var null|string */
-    public $type;
+    public $game;
 
     /** @var string[]|array */
     public $players;
 
-    public function __construct(?string $type, array $players)
+    public function __construct(?string $game, array $players)
     {
-        $this->type = $type;
+        $this->game = $game;
         $this->players = $players;
     }
 }

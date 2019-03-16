@@ -1,7 +1,7 @@
-Skeleton\Dart\Domain\Party\Type:
+Skeleton\Dart\Domain\Party\Game:
     type: embeddable
     fields:
-        type:
+        game:
             type: string
             length: 25
             nullable: false

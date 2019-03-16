@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Skeleton\Dart\Domain\Party;
 
-use Skeleton\Dart\Domain\Party\Player\Player;
 use Webmozart\Assert\Assert;
 
 class PlayersCollection
@@ -19,7 +18,7 @@ class PlayersCollection
 
     public function addPlayer(Player $player)
     {
-        $this->players[$player->nickname()->__toString()] = $player;
+        $this->players[$player->__toString()] = $player;
     }
 
     public static function fromPlayers(array $players)
@@ -27,5 +26,12 @@ class PlayersCollection
         Assert::allIsInstanceOf($players, Player::class, sprintf('Each player should be an instance of %s', Player::class));
 
         return new self($players);
+    }
+
+    public function __toArray(): array
+    {
+        return array_map(function (Player $player) {
+            return $player->__toString();
+        }, $this->players);
     }
 }

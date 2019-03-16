@@ -19,12 +19,15 @@ class PartyDatabaseRepository extends IntegrationCase
         $party = (new PartyBuilder())
             ->withType('301')
             ->withIdentifier($identifier)
+            ->withPlayers(['skeleton', 'krevindiou'])
             ->build();
         $repository = $this->get('Skeleton\Dart\Infrastructure\Party\Persistence\PartyDatabaseRepository');
+
         $repository->save($party);
 
         $party = $repository->get(Identifier::fromString($identifier));
         Assert::assertSame($identifier, $party->getIdentifier()->__toString());
         Assert::assertSame('301', $party->getType()->__toString());
+        Assert::assertSame(['skeleton', 'krevindiou'], $party->getPlayers()->__toArray());
     }
 }

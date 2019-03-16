@@ -9,7 +9,7 @@ use Skeleton\Dart\Domain\Party\Identifier;
 use Skeleton\Dart\Domain\Party\Party;
 use Skeleton\Dart\Domain\Party\Type;
 use Skeleton\Dart\Domain\Party\Player\Nickname;
-use Skeleton\Dart\Domain\Party\Player\Player;
+use Skeleton\Dart\Domain\Party\Player;
 use Skeleton\Dart\Domain\Party\PlayersCollection;
 
 class PartyBuilder
@@ -27,7 +27,7 @@ class PartyBuilder
     {
         $this->identifier = Identifier::fromString(Uuid::uuid4()->toString());
         $this->type = Type::fromString('301');
-        $this->players = PlayersCollection::fromPlayers([Player::create(Nickname::fromString('skeleton'))]);
+        $this->players = PlayersCollection::fromPlayers([Player::fromString('skeleton')]);
     }
 
     public function build()
@@ -55,7 +55,7 @@ class PartyBuilder
     {
         $players = [];
         foreach ($nicknames as $nickname) {
-            $players[] = Player::create(Nickname::fromString($nickname));
+            $players[] = Player::fromString($nickname);
         }
 
         $this->players = PlayersCollection::fromPlayers($players);

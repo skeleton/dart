@@ -2,6 +2,7 @@ Skeleton\Dart\Domain\Party\PlayersCollection:
     type: embeddable
     fields:
         players:
-            type: simple_array
+            type: players_collection
             nullable: false
-            column: field
+            column: collection
+            length: 3000

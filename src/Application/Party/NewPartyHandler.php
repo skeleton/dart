@@ -6,8 +6,7 @@ use Ramsey\Uuid\Uuid;
 use Skeleton\Dart\Domain\Party\Identifier;
 use Skeleton\Dart\Domain\Party\Party;
 use Skeleton\Dart\Domain\Party\Type;
-use Skeleton\Dart\Domain\Party\Player\Nickname;
-use Skeleton\Dart\Domain\Party\Player\Player;
+use Skeleton\Dart\Domain\Party\Player;
 use Skeleton\Dart\Domain\Party\PlayersCollection;
 
 class NewPartyHandler
@@ -18,7 +17,7 @@ class NewPartyHandler
 
         $players = [];
         foreach ($newParty->players as $player) {
-            $players[] = Player::create(Nickname::fromString($player));
+            $players[] = Player::fromString($player);
         }
 
         $players = PlayersCollection::fromPlayers($players);

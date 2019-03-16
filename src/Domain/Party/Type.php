@@ -13,7 +13,7 @@ class Type
     /** @var string */
     private $type;
 
-    private function __construct(?string $type)
+    private function __construct(string $type)
     {
         Assert::stringNotEmpty($type, 'Type cannot be empty');
         Assert::oneOf($type, [self::GAME_301], sprintf('Type should be one of those value: %s', implode(', ', [self::GAME_301])));
@@ -21,7 +21,7 @@ class Type
         $this->type = $type;
     }
 
-    public static function fromString(?string $type)
+    public static function fromString(string $type): Type
     {
         return new self($type);
     }

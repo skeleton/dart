@@ -30,11 +30,6 @@ class TypeSpec extends ObjectBehavior
         $this->shouldThrow('\InvalidArgumentException')->during('fromString', ['']);
     }
 
-    public function it_throws_an_exception_if_type_is_null()
-    {
-        $this->shouldThrow('\InvalidArgumentException')->during('fromString', [null]);
-    }
-
     public function it_throws_an_exception_if_type_is_not_in_defined_list()
     {
         $this->shouldThrow('\InvalidArgumentException')->during('fromString', ['other']);

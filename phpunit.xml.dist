@@ -17,16 +17,10 @@
     </php>
 
     <testsuites>
-        <testsuite name="Dart_Suite">
-            <directory>tests/integration</directory>
+        <testsuite name="dart">
+            <directory>tests/Integration</directory>
         </testsuite>
     </testsuites>
-
-    <filter>
-        <whitelist>
-            <directory>src</directory>
-        </whitelist>
-    </filter>
 
     <listeners>
         <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener" />

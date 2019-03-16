@@ -10,7 +10,7 @@ use Skeleton\Dart\Domain\Party\Identifier;
 use Skeleton\Dart\Test\Common\Party\PartyBuilder;
 use Skeleton\Dart\Test\Integration\IntegrationCase;
 
-class PartyDatabaseRepository extends IntegrationCase
+class PartyDatabaseRepositoryTest extends IntegrationCase
 {
     /** @test */
     public function saveANewParty()

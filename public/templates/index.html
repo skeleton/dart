@@ -5,15 +5,36 @@
         <title>Dart game</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="apple-touch-icon" href="icon.png">
+        <script type="text/x-template" id="new-party">
+            <div>
+                Type of game:
+                <select v-model="game">
+                    <option></option>
+                    <option>301</option>
+                </select>
+                User(s):
+                <li v-for="(user, index) in users">
+                    <input type="text" v-model="user.nickname">
+                    <button @click="deleteUser(index)">Delete</button>
+                </li>
+                <button type="button" @click="addUser">+</button>
+                <button type="submit" @click="play">Play</button>
+            </div>
+        </script>
     </head>
     <body>
-        <!--[if lte IE 9]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and        security.</p>
-        <![endif]-->
         <h1>Dart game</h1>
-        <div></div>
+        <div id="app">
+            <div>
+                <router-link to="/new-party">New party</router-link>
+            </div>
+            <router-view></router-view>
+        </div>
+        <script src="js/index.js"></script>
     </body>
 </html>
+

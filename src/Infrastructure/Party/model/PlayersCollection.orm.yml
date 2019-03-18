@@ -1,0 +1,8 @@
+Skeleton\Dart\Domain\Party\PlayersCollection:
+    type: embeddable
+    fields:
+        players:
+            type: players_collection
+            nullable: false
+            column: collection
+            length: 3000

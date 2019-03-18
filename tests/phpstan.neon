@@ -1,0 +1,6 @@
+parameters:
+    level: 6
+    paths:
+        - %rootDir%/src
+    ignoreErrors:
+        - '#Method Skeleton\\Dart\\Infrastructure\\Party\\Persistence\\PartyDatabaseRepository::get() should return Skeleton\\Dart\\Domain\\Party\\Party|null but returns object|null.#'

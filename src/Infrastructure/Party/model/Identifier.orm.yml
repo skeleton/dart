@@ -1,0 +1,7 @@
+Skeleton\Dart\Domain\Party\Identifier:
+    type: embeddable
+    id:
+        identifier:
+            type: string
+            generator:
+                strategy: UUID

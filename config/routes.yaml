@@ -1,0 +1,4 @@
+index:
+    path: /new-party
+    controller: Skeleton\Dart\Infrastructure\Party\Ui\NewParty\NewPartyController::index
+    methods: POST

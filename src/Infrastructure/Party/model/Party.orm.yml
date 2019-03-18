@@ -1,0 +1,11 @@
+Skeleton\Dart\Domain\Party\Party:
+    table: party
+    type: entity
+    repository: Skeleton\Dart\Infrastructure\Party\Persistence\PartyDatabaseRepository
+    embedded:
+        identifier:
+            class: Skeleton\Dart\Domain\Party\Identifier
+        game:
+            class: Skeleton\Dart\Domain\Party\Game
+        players:
+            class: Skeleton\Dart\Domain\Party\PlayersCollection
